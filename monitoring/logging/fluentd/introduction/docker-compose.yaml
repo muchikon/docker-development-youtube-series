@@ -28,7 +28,7 @@ services:
     - ./file:/app
     command: [ /bin/sh , -c , "chmod +x /app/app.sh && ./app/app.sh"]
   elasticsearch: # port 9200
-    image: elasticsearch:7.9.1
+    image: elasticsearch:7.12.1
     container_name: elasticsearch
     environment:
     - node.name=elasticsearch
@@ -40,7 +40,7 @@ services:
         soft: -1
         hard: -1
   kibana:
-    image: kibana:7.9.1
+    image: kibana:7.12.1
     container_name: kibana
     ports:
       - "5601:5601"
